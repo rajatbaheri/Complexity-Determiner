@@ -1,42 +1,44 @@
-import time
-import sys
 import random
-import importlib
-from . import solve
+import time
+from collections import Counter
+
+
+#import the file containing algorithm here
+
+
 
 def findcompx(result):
-
-    givecomp={1:"exponential",2:"n^3",3:"n^2lgn",4:"n^2",5:"nlgn",6:"nlgn",7:"n",8:"logarithmic"}
-    # dictionary assign complexity where key is pow10 value
-
-    pow10 = 0
-
-    above1s = False
-    for pow10 in range(1,6+1):
-
-        arr=[random.randrange(-10000,10000) for x in range ((10**pow10))]
-        # list arr consisting of 10^pow10 integers gets created
-
+    complexity_dict = {1:'lgn', 2:'n', 3:'nlgn', 4:'n^2', 5:'n^2lgn', 6:'n^2lgn',7:'n^3',8:'n^3', 10:'exponential'}
+    last_time = 1
+    sizeorder = 2**20
+    list2nbyn = []
+    for i in range(1, 21):
+        arr = [random.randrange(-100000,100000) for i in range(2**i)]
+        
         start_time = time.time()
-
-        result(arr) # result is basically filename.functonName
-        
-        
-        timetaken = time.time()-start_time
-        #print(time.time()-start_time)
-
-        if(timetaken > 1):
-            above1s = True
+        result(arr)
+        time_taken = time.time()-start_time
+        time2nbyn = time_taken/last_time
+        list2nbyn.append(round(time2nbyn))
+        if time_taken > 1:
+            sizeorder = 2**i
             break
-    if above1s == False:
-        if timetaken <= 0.0001:
-            pow10 = 8
-        else:
-            pow10 = 7
-    return givecomp[pow10]
+        last_time = time_taken
+    stepDict = Counter(list2nbyn)
+    steps = 1
+    stepsval = 0
+    for k, v in stepDict.items():
+        if v >= stepsval:
+            steps = k
+            stepsval = v
+    
+    if steps == 2 and sizeorder < 1000000:
+        steps += 1
+    if steps > 8:
+        return complexity_dict[10]
+    return complexity_dict[steps]
 
+# driver code
 
- #        Wed 16 Sep 2020 04:33:22 PM IST 
-       #        astrainL3gi0N
-
-
+# Tuesday 29 December 2020 03:45:24 PM IST
+            # astrainL3gi0N

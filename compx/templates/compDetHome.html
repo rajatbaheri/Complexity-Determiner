@@ -14,6 +14,7 @@
             reference to the array</p>
 
         <form class ="myform" enctype="multipart/form-data" action="" method="post"> <!-- Do not forget to add: enctype="multipart/form-data" -->
+            {% csrf_token %}
             {{ form.non_field_errors }}
 <div class="fieldWrapper">
     {{ form.function_name.errors }}
