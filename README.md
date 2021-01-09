@@ -12,8 +12,8 @@ The repository consists of django web application for the project Complexity-Det
    
    -> cd comp-in-django
    
-   -> python3 manage,py runserver
+   -> python3 manage.py runserver
    
-  <img src="https://github.com/rajatbaheri/Complexity-Determiner/blob/master/images/main.png">
+  <img src="https://github.com/rajatbaheri/Complexity-Determiner/blob/homepage/compx/static/images/main1.png">
 
-<img src="https://github.com/Nickhil1737/comp-in-django/blob/master/compx/static/images/Screenshot_2020-12-26_20-15-12.png">
+<img src="https://github.com/rajatbaheri/Complexity-Determiner/blob/homepage/compx/static/images/middle.png">
