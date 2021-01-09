@@ -1,15 +1,38 @@
 {% extends "basetemplate.html" %}
 {%block compHomepage %}
+<style type="text/css">
+    .rightpane {
+  width: 25%;
+  height: 100%;
+  position: relative;
+  float: right;
+  background-color: rgba(0,0,0, 0.4);
+  border-collapse: collapse;
+  color:#ffffff
+</style>
+        <div class="rightpane editp"><!-- Added at top not at botom as it will set it right first and then other stuff will set set left to it-->
+            <h2><u>Recent Uploads</h2></u>
+                <ul>
+                {% for f in instances %}
+                <li>
+                <a href = "{{f.get_absolute_url}}">
+                {{f.fname_field}}</a>  {{f.complexity_field}}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
         <section class="editp">
-            <p ><span style="text-decoration:underline;" >Brief
-                Description:</span><br>To get the complexity of any
+           <p  style="color:#ffffff"class="lead card-text"><span style="text-decoration:underline;" >Brief
+                Description:</span></p>
+            <p style="color:#ffffff"class="lead card-text">
+                To get the complexity of any
         python program, upload the python program file or enter(/paste) the
         code in the text-area and hit 'Submit' button.</p>
         </section>
-        <br>
-
-        <div class="container">
-                <p>Note: The program should contain only function definition and
+        <div  class="container">
+                <p  style="color:#ffffff"class="lead card-text">Note: The program should contain only function definition and
             the specified arguments in the function definition should be just
             reference to the array</p>
 
@@ -18,176 +41,36 @@
             {{ form.non_field_errors }}
 <div class="fieldWrapper">
     {{ form.function_name.errors }}
-    <label for="{{ form.function_name.id_for_label }}">Enter function name:</label>
+    <label  style="color:#ffffff"class="lead card-text" for="{{ form.function_name.id_for_label }}">Enter function name:</label>
     {{ form.function_name }}
 </div>
     <br>
 <div class="fieldWrapper">
     {{ form.file.errors }}
-    <label for="{{ form.file.id_for_label }}">Upload a .py File:</label>
+    <label  style="color:#ffffff"class="lead card-text" for="{{ form.file.id_for_label }}">Upload a .py File :</label>
     {{ form.file }}
 </div>
     <br>
-    {{ form.code.errors }}
-    <label for="{{ form.code.id_for_label }}">Enter Your Code:</label>
-    {{ form.code }}
     <br>
             <input class="buttonsub" type="submit" value="Submit">
         </form>
-        <div class="styletable">
-            <table>
-                <caption class=tablehead>Standard Algorithms</caption>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/selectionSort.py"
-                            target=__blank>Selection Sort</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/selectionSort.py"
-                            target=__blank>Selection Sort</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/insertionSort.py"
-                            target=__blank>Insertion Sort</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/selectionSort.py"
-                            target=__blank>Selection Sort</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/selectionSort.py"
-                            target=__blank>Quick Sort</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/selectionSort.py"
-                            target=__blank>Quick Sort</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/mergeSort.py"
-                            target=__blank>Merge Sort</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/quickSort.py"
-                            target=__blank>Quick Sort</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                            target=__blank>Factorial</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                            target=__blank>Bubble Sort</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                            target=__blank>Factorial</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                            target=__blank>DNF Sort</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/binarySearch.py"
-                            target=__blank>Binary Search</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/binarySearch.py"
-                            target=__blank>Factorial</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/linearSearch.py"
-                            target=__blank>Linear Search</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/linearSearch.py"
-                            target=__blank>Factorial</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/quickSort.py"
-                            target=__blank>Heap Sort</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a
-                            href="https://raw.githubusercontent.com/NikhilistRaj/Algorithms-Implentation-in-Python/master/quickSort.py"
-                            target=__blank>Pop Stack</a>
-                    </td>
-                    <td>
-                        <a
-                            href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                            target=__blank>Pop Stack</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <a
-                                href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                                target=__blank>Find max_element</a>
-                    </td>
-                    <td>
-                            <a
-                                href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                                target=__blank>Pop Stack</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <a
-                                href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                                target=__blank>Factorial</a>
-                    </td>
-                    <td>
-                            <a
-                                href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                                target=__blank>Fibonacci Sequence</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                            <a
-                                href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                                target=__blank>Fibonacci Sequence</a>
-                    </td>
-                    <td>
-                            <a
-                                href="https://github.com/NikhilistRaj/Algorithms-Implentation-in-Python/blob/master/bubbleSort.py"
-                                target=__blank>Factorial</a>
-                    </td>
-                </tr>
-            </table>
+        <div class="clr">
         </div>
+    <p>
+         
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br><!-- this willl help to increase the size of the page-->
+         <br>
+         <br>
+         <br>
+     </p>
+
 {% endblock %}
