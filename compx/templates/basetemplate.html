@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>Complexity Determiner</title>
+   <head>
+        <title>Complexity Determiner-Program</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         {% load static %}
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
         <link rel ="stylesheet" href="{% static 'css/homestyles.css' %}">
+        <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .hero-image {
+
+  background-image: url("{% static 'images/background.jpg' %}"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 100%; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  size: 55%;
+}
+        .box{
+        position: relative;
+        display: inline-block; /* Make the width of box same as image */
+    }
+        .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 60%; /* Set the width of the positioned div */
+    }
+
+ 
+    </style>
 
     </head>
-
+     <div  class="hero-image">
+    <div style="position: realative ;background-color: rgba(0,0,0, 0.6); width: 100%; height: 100%">
     <body>
+       
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"></svg>
+        <img src="{% static 'images/headimg.jpg' %}">
+        <h1><strong>Complexity Determiner</strong></h1>
+      </a>
+    </div>
+  </div>
 
-        <header id="heading">
-            <center>    
-            <h1> <a href="{% url 'compHome' %}" >Complexity-Determiner for Python Programs</a>    </h1>
-            </center>
-                </header>
 
     {%block compHomepage %} {% endblock %}
     {%block compSuccess %} {% endblock %}
-        <footer id="footstyle">
-            Created by: RC
+    </div>
+</div>
+        <footer class="mb-1" id="footstyle">
+            <center>Created by:- " &copy; NIkHILIST-RAJ"
+            </center>
         </footer>
 
     </body>
 
 </html>
+
