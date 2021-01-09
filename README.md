@@ -8,7 +8,7 @@ The repository consists of django web application for the project Complexity-Det
 
 -> Open Terminal and run following commands:
 
-   -> git clone https://github.com/rajatbaheri/Complexity-Determiner.git
+   -> git clone https://github.com/rajat-chn/Complexity-Determiner.git
    
    -> cd comp-in-django
    
@@ -17,3 +17,4 @@ The repository consists of django web application for the project Complexity-Det
   <img src="https://github.com/rajatbaheri/Complexity-Determiner/blob/homepage/compx/static/images/main1.png">
 
 <img src="https://github.com/rajatbaheri/Complexity-Determiner/blob/homepage/compx/static/images/middle.png">
+<!-- got my name changed from rajatbaheri to rajat-chn-->
