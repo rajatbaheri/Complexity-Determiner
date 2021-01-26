@@ -1,0 +1,46 @@
+
+{% extends "basetemplate.html" %}
+    {% block compSuccess %}
+    <div class="container">
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The Faster Algorithm:-{{instance.fname_field}}</p> </h2>
+        <textarea readonly="readonly"  rows="40" cols="80">
+        {{instance.code_field}}
+        </textarea>
+        <br>
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        {% if instance.complexity_field == "1" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(log<sub>2</sub>n) </h1>
+        {% elif instance.complexity_field == "2" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(n) </h1>
+        {% elif instance.complexity_field == "3" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(nlog<sub>2</sub>n) </h1>
+        {% elif instance.complexity_field == "4" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(n<sup>2</sup>) </h1>
+        {% elif instance.complexity_field == "5" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(n<sup>2</sup>lgn) </h1>
+        {% elif instance.complexity_field == "6" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(n<sup>2</sup>lgn) </h1>
+        {% elif instance.complexity_field == "7" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(n<sup>3</sup>) </h1>
+        {% elif instance.complexity_field == "8" %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(n<sup>4</sup>) </h1>
+        {% else  %}
+            <h2><p style="color:#ffffff" class="fw-light"><span style="text-decoration:underline;"  >
+        The complexity of the program: &#920(exponential) </h2>
+        {% endif  %}
+
+        <br>
+        <br>
+    </div>
+        
+
+    {% endblock %}

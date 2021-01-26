@@ -1,4 +1,4 @@
-# complexity-determiner for python programs
+# Complexity-Determiner for python programs
 
 The repository consists of django web application for the project Complexity-Determiner.
 
@@ -8,13 +8,17 @@ The repository consists of django web application for the project Complexity-Det
 
 -> Open Terminal and run following commands:
 
-   -> git clone https://github.com/rajat-chn/Complexity-Determiner.git
+   -> git clone https://github.com/Nickhil1737/comp-in-django
    
    -> cd comp-in-django
    
+   -> python3 manage.py makemigrations
+   
+   -> python3 manage.py migrate
+   
    -> python3 manage.py runserver
    
-  <img src="https://github.com/rajatbaheri/Complexity-Determiner/blob/homepage/compx/static/images/main1.png">
+<img src=https://github.com/Nickhil1737/comp-in-django/blob/featCompare/compx/static/images/input1.png>
+<img src=https://github.com/Nickhil1737/comp-in-django/blob/featCompare/compx/static/images/input2.png>
+<img src=https://github.com/Nickhil1737/comp-in-django/blob/featCompare/compx/static/images/out.png>
 
-<img src="https://github.com/rajatbaheri/Complexity-Determiner/blob/homepage/compx/static/images/middle.png">
-<!-- got my name changed from rajatbaheri to rajat-chn-->
