@@ -10,12 +10,6 @@ The repository consists of django web application for the project Complexity-Det
 
    -> git clone https://github.com/rajat-chn/Complexity-Determiner
    
-   -> cd comp-in-django
-   
-   -> python3 manage.py makemigrations
-   
-   -> python3 manage.py migrate
-   
    -> python3 manage.py runserver
    
    -> Must have a 64 bit machine otherwie some function might not work
