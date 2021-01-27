@@ -8,7 +8,7 @@ The repository consists of django web application for the project Complexity-Det
 
 -> Open Terminal and run following commands:
 
-   -> git clone https://github.com/Nickhil1737/comp-in-django
+   -> git clone https://github.com/rajat-chn/Complexity-Determiner
    
    -> cd comp-in-django
    
@@ -18,7 +18,9 @@ The repository consists of django web application for the project Complexity-Det
    
    -> python3 manage.py runserver
    
-<img src=https://github.com/Nickhil1737/comp-in-django/blob/featCompare/compx/static/images/input1.png>
-<img src=https://github.com/Nickhil1737/comp-in-django/blob/featCompare/compx/static/images/input2.png>
-<img src=https://github.com/Nickhil1737/comp-in-django/blob/featCompare/compx/static/images/out.png>
+   -> Must have a 64 bit machine otherwie some function might not work
+   
+<img src=https://github.com/rajat-chn/Complexity-Determiner/blob/homepage/compx/static/images/input1.png>
+<img src=https://github.com/rajat-chn/Complexity-Determiner/blob/homepage/compx/static/images/input2.png>
+<img src=https://github.com/rajat-chn/Complexity-Determiner/blob/homepage/compx/static/images/out.png>
 
