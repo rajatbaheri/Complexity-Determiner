@@ -18,3 +18,19 @@ The repository consists of django web application for the project Complexity-Det
 <img src=https://github.com/rajat-chn/Complexity-Determiner/blob/homepage/compx/static/images/input2.png>
 <img src=https://github.com/rajat-chn/Complexity-Determiner/blob/homepage/compx/static/images/out.png>
 
+
+### HEROKU FILES ###
+As we have deployed our project on heroku we have two additional file in our project
+      1. Procfile :- tell heroku how to activate server
+                                 
+                                 web: gunicorn compDet.wsgi
+                                 
+      2. Requirement.txt :- tell heroku server about the additional files required to run our project
+      
+      
+                                 asgiref==3.3.1
+                                 Django==3.1.5
+                                 gunicorn==20.0.4
+                                 pytz==2020.5
+                                 sqlparse==0.4.1
+
